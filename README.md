@@ -12,11 +12,15 @@ Getting rid of jQuery is achieved with a really dirty hack. Alas, this seems to 
 
 1. `npm install -g meteorite` (if not already installed)
 2. `mrt add angular-nojquery`
-3. edit .meteorite/packages and make angular-nojquery the very first required package (told you it was a hack, right?)
+3. edit .meteorite/packages and make following packages appear in order **before** all other packages:
+	ngMeteor
+	angular-nojquery
+	jquery
+You read correctly. jQuery (or better: a modified shim) has to be loaded last in order. Told you it was a dirty hack, right?
 
-Test your site leaving the inspector open to see if any actual jQuery dependencies pop up. Should you at one point need jQuery again, merely
+Test your site leaving the inspector open to see if any actual jQuery dependencies pop up. Should you at one point need jQuery again,
 	mrt remove angular-jquery
-Can't always be lucky ;o)
+And optionally reorder your .meteor/packages.
 
 ## License
 
