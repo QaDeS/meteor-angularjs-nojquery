@@ -1,0 +1,11 @@
+{
+  "name": "angular-nojquery",
+  "description": "Remove jQuery from your AngularJS Meteor app.",
+  "homepage": "https://github.com/QaDeS/meteor-angularjs-nojquery",
+  "author": "Michael Klaus <michael.klaus@gmx.net>",
+  "version": "0.0.1",
+  "git": "https://github.com/QaDeS/meteor-angularjs-nojquery.git",
+  "packages": {
+    "ngMeteor": {},
+  }
+}
